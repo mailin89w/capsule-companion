@@ -158,6 +158,7 @@ h1 em { color: var(--blush); font-weight: 400; }
 .library-card { border-radius: 20px; overflow: hidden; background: var(--paper); box-shadow: 0 8px 24px rgba(38,53,47,.06); transition: transform .25s, box-shadow .25s; }
 .library-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .library-photo { width: 100%; aspect-ratio: .72 / 1; background-repeat: no-repeat; background-size: 400% 100%; }
+.library-photo.triple-strip { background-size: 300% 100%; }
 .library-copy { position: relative; padding: 20px 20px 22px; }
 .look-index { position: absolute; top: -30px; right: 14px; display: grid; width: 48px; height: 48px; place-items: center; border: 4px solid var(--paper); border-radius: 50%; color: white; background: var(--ink); font-family: "DM Serif Display", serif; font-size: 19px; }
 .library-copy h2 { max-width: 80%; font-family: "DM Serif Display", serif; font-size: 27px; line-height: 1.05; }
@@ -171,6 +172,28 @@ h1 em { color: var(--blush); font-weight: 400; }
 .lookbook-note h2 { font-size: clamp(45px, 5vw, 72px); }
 .lookbook-note > p { margin: 0; color: rgba(255,255,255,.78); }
 .lookbook-note .button { color: var(--ink); background: var(--paper); white-space: nowrap; }
+.planner-hero { padding: 100px max(6vw,28px) 70px; background: linear-gradient(125deg,var(--cream) 0 70%,#e6d6ce 70%); }
+.planner-hero h1 { font-size: clamp(64px,8vw,110px); }
+.planner-hero p:last-child { max-width: 670px; color: var(--ink-soft); font-size: 18px; }
+.optimizer { padding: 45px max(6vw,28px) 80px; color: white; background: var(--ink); }
+.optimizer-controls { display: grid; grid-template-columns: repeat(3,1fr) auto; gap: 12px; align-items: end; }
+.optimizer-controls label span { display: block; margin: 0 0 7px; color: rgba(255,255,255,.65); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.optimizer-controls select { width: 100%; padding: 13px 36px 13px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; color: white; background: #34433d; }
+.optimizer-controls .button { border: 0; color: var(--ink); background: var(--blush-light); cursor: pointer; }
+.optimizer-result { margin-top: 30px; padding: 32px; border-radius: var(--radius); color: var(--ink); background: var(--paper); }
+.result-summary { display: flex; gap: 35px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.result-summary span { color: var(--ink-soft); font-size: 12px; }
+.result-summary strong { display: block; color: var(--ink); font-family: "DM Serif Display",serif; font-size: 35px; font-weight: 400; }
+.optimizer-result h2 { margin: 25px 0 18px; font-size: 36px; }
+.result-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.result-chips span { padding: 9px 13px; border-radius: 100px; background: var(--cream); font-size: 13px; }
+.result-note { margin: 20px 0 0; color: var(--ink-soft); font-size: 12px; }
+.wardrobe-section { padding: 90px max(6vw,28px); }
+.wardrobe-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+.wardrobe-item { display: flex; align-items: center; gap: 13px; padding: 18px; border: 1px solid var(--line); border-radius: 15px; }
+.wardrobe-item > span { display: grid; flex:0 0 40px; width:40px;height:40px;place-items:center;border-radius:50%;background:var(--cream);font-size:20px; }
+.wardrobe-item strong,.wardrobe-item small { display:block; }
+.wardrobe-item small { color:var(--ink-soft);font-size:11px;margin-top:2px; }
 
 .future-banner { display: grid; padding: 75px max(6vw, 28px); color: white; background: var(--camel); grid-template-columns: 1.4fr 1fr; align-items: end; gap: 40px; }
 .future-banner .eyebrow { color: #f1dbcb; }
@@ -191,6 +214,8 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 30px
   .future-banner { grid-template-columns: 1fr; }
   .lookbook-grid { grid-template-columns: repeat(2, 1fr); }
   .lookbook-note { grid-template-columns: 1fr; align-items: start; }
+  .optimizer-controls { grid-template-columns: 1fr 1fr; }
+  .wardrobe-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 600px) {
@@ -226,4 +251,8 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 30px
   .lookbook-toolbar { align-items: end; }
   .lookbook-grid { grid-template-columns: 1fr; }
   .library-photo { aspect-ratio: .82 / 1; }
+  nav { gap: 11px; }
+  .optimizer-controls { grid-template-columns: 1fr; }
+  .result-summary { gap: 18px; }
+  .wardrobe-grid { grid-template-columns: 1fr; }
 }

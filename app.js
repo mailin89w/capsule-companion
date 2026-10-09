@@ -3,6 +3,8 @@ const capsuleItems = [
   { name: "Stoffhose", detail: "schwarz · schick", icon: "◇", color: "#3b403e", tags: ["dark"] },
   { name: "Lederleggings", detail: "schwarz · edgy", icon: "◐", color: "#242625", tags: ["dark"] },
   { name: "Shorts", detail: "schwarz · feminin", icon: "◫", color: "#797b78", tags: ["dark"] },
+  { name: "Leo-Midikleid", detail: "langarm · feminin", icon: "◉", color: "#8b573d", tags: ["dark"] },
+  { name: "Kariertes Kleid", detail: "Blusenoptik · preppy", icon: "▦", color: "#9a856f", tags: ["light"] },
   { name: "Weißes Top", detail: "clean · vielseitig", icon: "○", color: "#eee8df", tags: ["light"] },
   { name: "Longsleeve", detail: "schwarz · warm", icon: "●", color: "#424440", tags: ["dark"] },
   { name: "Braunes T-Shirt", detail: "warm · lässig", icon: "◒", color: "#9a6d52", tags: ["dark"] },
@@ -12,6 +14,7 @@ const capsuleItems = [
   { name: "Schwarzer Blazer", detail: "clean · elegant", icon: "✧", color: "#323534", tags: ["dark", "layer"] },
   { name: "Lederjacke", detail: "schwarz · cool", icon: "◈", color: "#1d1f1e", tags: ["dark", "layer"] },
   { name: "Strickjacke", detail: "creme · gemütlich", icon: "≈", color: "#d6c6ae", tags: ["light", "layer"] },
+  { name: "Lemon-Cardigan", detail: "gelb · Highlight", icon: "☼", color: "#eadb74", tags: ["light", "layer"] },
   { name: "Regenjacke", detail: "wind- & wetterfest", icon: "☂", color: "#758077", tags: ["dark", "layer"] },
   { name: "Thermostrumpfhose", detail: "80 DEN · warm", icon: "◑", color: "#524946", tags: ["dark"] },
   { name: "Schwarze Cap", detail: "sporty · casual", icon: "⌒", color: "#2b2d2c", tags: ["dark"] }

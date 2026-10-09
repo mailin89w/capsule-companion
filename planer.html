@@ -1,0 +1,27 @@
+<!doctype html><html lang="de"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#26352f">
+  <title>Capsule-Planer · Capsule Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head><body class="planner-page">
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>Capsule Companion</span></a><nav><a href="index.html#capsule">Capsule</a><a href="index.html#packliste">Packliste</a><a href="inspo.html">Inspo</a><a href="planer.html" aria-current="page">Planer</a></nav></header>
+  <main>
+    <section class="planner-hero"><p class="eyebrow">Weniger Teile · mehr Looks</p><h1>Dein Capsule-<em>Planer.</em></h1><p>Wähle Reisedauer, Wetter und Stil. Der Planer stellt daraus eine kleine, vielseitige Auswahl aus deiner Garderobe zusammen.</p></section>
+    <section class="optimizer">
+      <form class="optimizer-controls" id="optimizerForm">
+        <label><span>Reisedauer</span><select id="days"><option value="3">3 Tage</option><option value="5">5 Tage</option><option value="7">7 Tage</option><option value="10" selected>10 Tage</option><option value="14">14 Tage</option></select></label>
+        <label><span>Wetter</span><select id="weather"><option value="mild">Mild · 13–18 °C</option><option value="mixed" selected>Wechselhaft · 7–15 °C</option><option value="cold">Kühl · 4–11 °C</option><option value="rain">Regen & Wind</option></select></label>
+        <label><span>Stil-Mix</span><select id="style"><option value="balanced" selected>Hell & dunkel</option><option value="light">Eher hell</option><option value="dark">Eher dunkel</option><option value="sporty">Sportlich & schick</option></select></label>
+        <button class="button primary" type="submit">Beste Auswahl berechnen</button>
+      </form>
+      <div class="optimizer-result" id="optimizerResult"></div>
+    </section>
+    <section class="wardrobe-section">
+      <div class="section-heading"><div><p class="eyebrow">Deine Basis</p><h2>Garderobenbibliothek</h2></div><p>Der Startbestand für Bremen. Später können hier weitere Lieblingsteile, Farben und Jahreszeiten ergänzt werden.</p></div>
+      <div class="wardrobe-grid" id="wardrobeGrid"></div>
+    </section>
+  </main>
+  <footer><span>Capsule Companion</span><span>Deine Garderobe wächst – die Koffer bleiben leicht.</span></footer>
+  <script src="planer.js?v=1"></script>
+</body></html>
