@@ -30,36 +30,36 @@ const weatherData = {
     label: "Mild", icon: "☀", temp: "13–17 °C",
     summary: "Leichte Layer reichen. Nutze Blazer und Hemd als variable Außenschicht und lass die dicken Teile im Koffer.",
     outfits: [
-      { mood: "Light Casual", name: "Bremen Bright", pieces: ["Wide-Leg-Jeans", "Weißes Top", "Rosa Blazer", "Weiße Sneaker"] },
-      { mood: "Sporty Chic", name: "Range Rover Mami", pieces: ["Sportleggings", "Weißes Top", "Schwarzer Blazer", "Cap + Sneaker"] },
-      { mood: "Relaxed", name: "Soft Layer", pieces: ["Braunes T-Shirt", "Oversized-Hemd", "Stoffhose", "Sneaker"] }
+      { mood: "Light Casual", name: "Bremen Bright", image: "assets/look-pink-blazer.jpg", pieces: ["Wide-Leg-Jeans", "Weißes Top", "Rosa Blazer", "Weiße Sneaker"] },
+      { mood: "Sporty Chic", name: "Range Rover Mami", image: "assets/look-sporty-black.jpg", pieces: ["Sportleggings", "Weißes Top", "Schwarzer Blazer", "Cap + Sneaker"] },
+      { mood: "Edgy", name: "Leather Chic", image: "assets/look-leather.jpg", pieces: ["Lederleggings", "Weißes Top", "Lederjacke", "Boots"] }
     ]
   },
   kuehl: {
     label: "Kühl", icon: "◒", temp: "8–12 °C",
     summary: "Jetzt zählt das Zwiebelprinzip: Longsleeve oder Hemd unter Strick, geschlossene Schuhe und eine Jacke darüber.",
     outfits: [
-      { mood: "Hell & Warm", name: "Cream & Denim", pieces: ["Wide-Leg-Jeans", "Creme-Pullover", "Lederjacke", "Sneaker"] },
-      { mood: "Dark Smart", name: "City Black", pieces: ["Stoffhose", "Schwarzes Longsleeve", "Schwarzer Blazer", "Boots"] },
-      { mood: "Feminine", name: "Shorts im Herbst", pieces: ["Shorts", "Thermostrumpfhose", "Creme-Pullover", "Boots"] }
+      { mood: "Hell & Warm", name: "Cream & Denim", image: "assets/look-pink-blazer.jpg", pieces: ["Wide-Leg-Jeans", "Creme-Pullover", "Lederjacke", "Sneaker"] },
+      { mood: "Dark Smart", name: "City Black", image: "assets/look-sporty-black.jpg", pieces: ["Stoffhose", "Schwarzes Longsleeve", "Schwarzer Blazer", "Boots"] },
+      { mood: "Feminine", name: "Shorts im Herbst", image: "assets/look-shorts.jpg", pieces: ["Shorts", "Thermostrumpfhose", "Creme-Pullover", "Boots"] }
     ]
   },
   regen: {
     label: "Regen", icon: "☂", temp: "wechselhaft",
     summary: "Empfindliches Wildleder bleibt geschützt. Die wetterfeste Jacke ist die äußere Schicht; darunter darf der Look trotzdem schick bleiben.",
     outfits: [
-      { mood: "Rain Ready", name: "Practical Chic", pieces: ["Stoffhose", "Weißes Top", "Strickjacke", "Regenjacke"] },
-      { mood: "Sporty", name: "City Walk", pieces: ["Sportleggings", "Creme-Pullover", "Regenjacke", "Cap"] },
-      { mood: "Light Mix", name: "Cloudy Pastels", pieces: ["Wide-Leg-Jeans", "Longsleeve", "Rosa Blazer", "Regenjacke"] }
+      { mood: "Rain Ready", name: "Practical Chic", image: "assets/look-sporty-black.jpg", pieces: ["Stoffhose", "Weißes Top", "Strickjacke", "Regenjacke"] },
+      { mood: "Sporty", name: "City Walk", image: "assets/look-leather.jpg", pieces: ["Sportleggings", "Creme-Pullover", "Regenjacke", "Cap"] },
+      { mood: "Light Mix", name: "Cloudy Pastels", image: "assets/look-pink-blazer.jpg", pieces: ["Wide-Leg-Jeans", "Longsleeve", "Rosa Blazer", "Regenjacke"] }
     ]
   },
   kalt: {
     label: "Kalt & windig", icon: "❄", temp: "4–8 °C",
     summary: "Mehrere dünne Schichten wärmen besser. Thermostrumpfhose, Longsleeve und Strick werden zu deinen wichtigsten Bausteinen.",
     outfits: [
-      { mood: "Layered", name: "Warm in Black", pieces: ["Lederleggings", "Longsleeve", "Creme-Pullover", "Lederjacke"] },
-      { mood: "Smart Warm", name: "Office Layer", pieces: ["Stoffhose", "Oversized-Hemd", "Strickjacke", "Regenjacke"] },
-      { mood: "Feminine", name: "Tights & Texture", pieces: ["Shorts", "Thermostrumpfhose", "Longsleeve", "Blazer + Jacke"] }
+      { mood: "Layered", name: "Warm in Black", image: "assets/look-leather.jpg", pieces: ["Lederleggings", "Longsleeve", "Creme-Pullover", "Lederjacke"] },
+      { mood: "Smart Warm", name: "Office Layer", image: "assets/look-pink-blazer.jpg", pieces: ["Stoffhose", "Oversized-Hemd", "Strickjacke", "Regenjacke"] },
+      { mood: "Feminine", name: "Tights & Texture", image: "assets/look-shorts.jpg", pieces: ["Shorts", "Thermostrumpfhose", "Longsleeve", "Blazer + Jacke"] }
     ]
   }
 };
@@ -139,7 +139,7 @@ function renderWeather() {
   document.querySelectorAll(".weather-tab").forEach(button => button.addEventListener("click", () => { activeWeather = button.dataset.weather; renderWeather(); }));
   const weather = weatherData[activeWeather];
   document.getElementById("weatherSummary").innerHTML = `<strong>${weather.icon} ${weather.temp}</strong><p>${weather.summary}</p>`;
-  document.getElementById("outfitGrid").innerHTML = weather.outfits.map(outfit => `<article class="outfit-card"><span class="outfit-tag">${outfit.mood}</span><h3>${outfit.name}</h3><ul>${outfit.pieces.map(piece => `<li>${piece}</li>`).join("")}</ul></article>`).join("");
+  document.getElementById("outfitGrid").innerHTML = weather.outfits.map(outfit => `<article class="outfit-card" style="background-image:url('${outfit.image}')"><span class="outfit-tag">${outfit.mood}</span><h3>${outfit.name}</h3><ul>${outfit.pieces.map(piece => `<li>${piece}</li>`).join("")}</ul></article>`).join("");
 }
 
 document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
