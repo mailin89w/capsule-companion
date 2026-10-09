@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#26352f">
+  <meta name="description" content="16 Outfit-Ideen aus Danielas Bremen-Capsule.">
+  <title>Outfit-Inspo · Capsule Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inspo-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
+      <span class="brand-mark">C</span><span>Capsule Companion</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html#capsule">Capsule</a>
+      <a href="index.html#packliste">Packliste</a>
+      <a href="inspo.html" aria-current="page">Inspo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lookbook-hero">
+      <div>
+        <p class="eyebrow">Deine Outfit-Bibliothek</p>
+        <h1>16 Looks.<br><em>Eine Capsule.</em></h1>
+      </div>
+      <p>Von hell und feminin bis dunkel und edgy: dieselben Lieblingsteile, immer wieder anders kombiniert.</p>
+    </section>
+
+    <section class="lookbook-section">
+      <div class="lookbook-toolbar">
+        <div class="filter-row" role="group" aria-label="Outfits filtern">
+          <button class="filter active" data-look-filter="all">Alle 16</button>
+          <button class="filter" data-look-filter="light">Hell</button>
+          <button class="filter" data-look-filter="dark">Dunkel</button>
+          <button class="filter" data-look-filter="mixed">Gemischt</button>
+          <button class="filter" data-look-filter="sporty">Sportlich</button>
+        </div>
+        <span id="lookCount">16 Looks</span>
+      </div>
+      <div class="lookbook-grid" id="lookbookGrid"></div>
+    </section>
+
+    <section class="lookbook-note">
+      <div>
+        <p class="eyebrow">Styling-Prinzip</p>
+        <h2>Gleiche Teile,<br>anderer Look.</h2>
+      </div>
+      <p>Ein weißes Top, die Wide-Leg-Jeans oder dein rosa Blazer tauchen mehrfach auf – genau dadurch bleibt die Packliste klein, ohne dass sich die Outfits jeden Tag gleich anfühlen.</p>
+      <a class="button primary" href="index.html#packliste">Zur Packliste</a>
+    </section>
+  </main>
+
+  <footer><span>Capsule Companion</span><span>16 Looks für Bremen · Herbst</span></footer>
+  <script src="inspo.js"></script>
+</body>
+</html>
