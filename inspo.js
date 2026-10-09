@@ -19,7 +19,7 @@ const looks = [
   { no: "18", name: "Evening Ready", group: "dark", strip: "dresses", pos: 1, tags: ["dunkel", "schick"], pieces: ["Leo-Midikleid", "Schwarzer Blazer", "Boots"] }
 ];
 
-const stripFiles = { light: "assets/lookbook-light.jpg", dark: "assets/lookbook-dark.jpg", mixed: "assets/lookbook-mixed.jpg", more: "assets/lookbook-more.jpg", lemon: "assets/lookbook-lemon-check.jpg", dresses: "assets/lookbook-dresses.jpg" };
+const stripFiles = { light: "assets/lookbook-light.jpg", dark: "assets/lookbook-dark.jpg", mixed: "assets/lookbook-mixed.jpg", more: "assets/lookbook-more.jpg", lemon: "assets/lookbook-lemon-check.jpg", dresses: "assets/lookbook-dresses-v2.jpg" };
 
 function renderLooks(filter = "all") {
   const visible = looks.filter(look => filter === "all" || look.group.includes(filter));
