@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#26352f">
+  <meta name="description" content="Danielas Capsule- und Packplaner für vielseitige Reisen.">
+  <title>Capsule Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Zur Startseite">
+      <span class="brand-mark">C</span>
+      <span>Capsule Companion</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#capsule">Capsule</a>
+      <a href="#packliste">Packliste</a>
+      <a href="#inspo">Inspo</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Bremen · 10 Tage · Herbst</p>
+        <h1>Wenig einpacken.<br><em>Viel daraus machen.</em></h1>
+        <p class="lead">Deine Capsule zwischen hell und dunkel, sportlich und schick – geplant für wechselhaftes Wetter und echte Lieblingsteile.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#packliste">Packliste starten</a>
+          <a class="button secondary" href="#inspo">Looks entdecken</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Abstrakte Outfit-Collage">
+        <div class="shape blush"></div>
+        <div class="shape blue"></div>
+        <div class="look-card light-look">
+          <span class="look-number">01</span>
+          <div class="garment blazer pink"></div>
+          <div class="garment trousers denim"></div>
+          <p>LIGHT</p>
+        </div>
+        <div class="look-card dark-look">
+          <span class="look-number">02</span>
+          <div class="garment blazer black"></div>
+          <div class="garment trousers leather"></div>
+          <p>DARK</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Capsule Zusammenfassung">
+      <div><strong>16</strong><span>Capsule-Teile</span></div>
+      <div><strong>12+</strong><span>fertige Looks</span></div>
+      <div><strong>2</strong><span>Farbwelten</span></div>
+      <div><strong>7–15°</strong><span>Wetterspanne</span></div>
+    </section>
+
+    <section class="section capsule-section" id="capsule">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Deine Basis</p>
+          <h2>Die Bremen-Capsule</h2>
+        </div>
+        <p>Jedes Teil erfüllt mehrere Rollen. Filtere nach Stimmung und sieh sofort, was zusammenpasst.</p>
+      </div>
+      <div class="filter-row" role="group" aria-label="Capsule filtern">
+        <button class="filter active" data-filter="all">Alle</button>
+        <button class="filter" data-filter="light">Hell</button>
+        <button class="filter" data-filter="dark">Dunkel</button>
+        <button class="filter" data-filter="layer">Layer</button>
+      </div>
+      <div class="capsule-grid" id="capsuleGrid"></div>
+    </section>
+
+    <section class="section planner-section" id="packliste">
+      <div class="section-heading light-heading">
+        <div>
+          <p class="eyebrow">Alles dabei</p>
+          <h2>Deine Packliste</h2>
+        </div>
+        <p>Hake ab, was im Koffer ist. Der Stand wird auf deinem Gerät gespeichert.</p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-copy"><span id="progressText">0 von 0 gepackt</span><strong id="progressPercent">0%</strong></div>
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+      <div class="packing-layout">
+        <aside class="category-tabs" id="categoryTabs" aria-label="Packlistenkategorien"></aside>
+        <div class="packing-panel">
+          <div class="packing-title">
+            <div>
+              <span class="category-icon" id="categoryIcon"></span>
+              <h3 id="categoryTitle"></h3>
+            </div>
+            <button class="text-button" id="toggleCategory">Alle auswählen</button>
+          </div>
+          <div class="checklist" id="checklist"></div>
+          <form class="add-form" id="addItemForm">
+            <label class="sr-only" for="newItem">Eigenen Eintrag hinzufügen</label>
+            <input id="newItem" type="text" maxlength="50" placeholder="Eigenen Eintrag ergänzen …" required>
+            <button type="submit" aria-label="Eintrag hinzufügen">+</button>
+          </form>
+        </div>
+      </div>
+      <button class="reset-button" id="resetList">Packliste zurücksetzen</button>
+    </section>
+
+    <section class="section inspo-section" id="inspo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Was ziehe ich an?</p>
+          <h2>Inspo nach Wetter</h2>
+        </div>
+        <p>Wähle die Wetterlage – wir zeigen dir passende Looks aus deiner Capsule.</p>
+      </div>
+      <div class="weather-tabs" id="weatherTabs" role="group" aria-label="Wetter wählen"></div>
+      <div class="weather-summary" id="weatherSummary"></div>
+      <div class="outfit-grid" id="outfitGrid"></div>
+    </section>
+
+    <section class="future-banner">
+      <div>
+        <p class="eyebrow">Bereit für die nächste Reise</p>
+        <h2>Eine Capsule, die mit dir wächst.</h2>
+      </div>
+      <p>Die Struktur ist vorbereitet für weitere Reiseziele, Reisedauern, Jahreszeiten und eigene Kleidungsstücke.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Capsule Companion</span>
+    <span>Für Daniela · mit weniger Gepäck und mehr Möglichkeiten</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
